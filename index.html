@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>isotope exam</title>
+	<link rel="stylesheet"  href="css/bootstrap.css">
+	<link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<div class="button-group filter-button-group custom-button">
+                <button data-filter="*">All</button>
+                <button data-filter=".metal">Grapics Design</button>
+                <button data-filter=".transition">Seo</button>
+                <button data-filter=".alkali, .alkaline-earth">Web Design</button>
+                
+             </div>
+		</div>
+		<div class="item-details">
+		<div class="col-lg-3 item * text-center">
+			<img src="img/1.jpg" alt="image" class="img-fluid">
+		</div>
+		<div class="col-lg-3 item metal ">
+			<img src="img/2.jpg" alt="image" class="img-fluid">
+		</div>
+		<div class="col-lg-3 item transition ">
+			<img src="img/3.jpg" alt="image" class="img-fluid">
+		</div>
+		<div class="col-lg-3 item alkali alkaline-earth">
+			<img src="img/4.jpg" alt="image" class="img-fluid">
+		</div>
+		<div class="col-lg-3 item metal ">
+			<img src="img/5.jpg" alt="image" class="img-fluid">
+		</div>
+		<div class="col-lg-3 item transition ">
+			<img src="img/6.jpg" alt="image" class="img-fluid">
+		</div>
+		<div class="col-lg-3 item metal ">
+			<img src="img/7.jpg" alt="image" class="img-fluid">
+		</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<script>
+		// init Isotope
+          var $grid = $('.item-details').isotope({
+            // options
+           });
+          $('.filter-button-group').on( 'click', 'button', function() {
+          var filterValue = $(this).attr('data-filter');
+         $grid.isotope({ filter: filterValue });
+         });
+	</script>
+
+</body>
+</html>
